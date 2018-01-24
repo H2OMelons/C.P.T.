@@ -1,0 +1,33 @@
+{
+  "manifest_version": 2,
+  "name": "C.P.T",
+  "description": "Replace your new tab with a personalized screen",
+  "version": "0.0.0.1",
+
+  "browser_action":{
+    "default_icon": {
+      "16": "images/new-tab-16.png" ,
+      "24": "images/new-tab-24.png",
+      "32": "images/new-tab-32.png"
+    },
+    "default_popup": "main_page.html",
+    "default_title": "C.P.T"
+  },
+
+  "icons":{
+    "128": "images/new-tab-128.png"
+  },
+  
+  "background":{
+    "persistent": true,
+    "page": "background.html"
+  },
+  
+  "permissions":[
+    "identity",
+    "storage",
+    "tabs"
+  ],
+  
+  "content_security_policy": "script-src 'self' https://apis.google.com https://code.jquery.com; object-src 'self'"
+}
