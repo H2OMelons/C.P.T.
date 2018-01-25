@@ -20,7 +20,11 @@
   
   "background":{
     "persistent": true,
-    "page": "background.html"
+    "scripts": ["background.js"]
+  },
+  
+  "chrome_url_overrides":{
+    "newtab": "content.html"
   },
   
   "permissions":[
