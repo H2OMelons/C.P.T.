@@ -10,6 +10,14 @@ var bookmarkDisplayDiv = document.getElementById('bookmark-display');
 var bookmarkDisplayVisibilityToggleDiv = document.getElementById('bookmark-visibility-toggle');
 /* Div variables */
 
+/* Button variables */
+var settingsButton = document.getElementById('settings-button');
+/* Button variables */
+
+/* Modal variables */
+var settingsModal = document.getElementById('settings-modal');
+/* Modal variables */
+
 /* CSS variables */
 var bookmarkDisplayExpandAnimation = "bookmark-display-expand-animation";
 var bookmarkDisplayOpacityAnimation = "bookmark-display-opacity-animation";
@@ -36,6 +44,15 @@ bookmarkDisplayDiv.addEventListener('mouseover', function(){
 
 bookmarkDisplayDiv.addEventListener('mouseout', function(){
   bookmarkDisplay.collapse();
+});
+
+settingsButton.addEventListener('click', function(){
+  if(window.getComputedStyle(settingsModal).display == "none"){
+    settingsModal.style.display = "block";
+  }
+  else{
+    settingsModal.style.display = "none";
+  }
 });
 
 window.onload = function(){
