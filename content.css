@@ -1,3 +1,59 @@
 body{
+  overflow: hidden;
+}
+
+#bookmark-display{
+  height: 150px;
+  position: absolute;
+  bottom: 0;
+  overflow: hidden;
+}
+
+#bookmark-visibility-toggle{
+  position: absolute;
+  bottom: -100%;
+  height: inherit;
+  width: 100%;
+}
+
+#expand-bookmark-display-row{
+  height: 35%;
+}
+
+#expand-bookmark-display-button{
   
+}
+
+.bookmark-scroll{
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 65%;
+}
+
+.bookmark-display-opacity-animation{
+  animation: bookmark-display-opacity-animation;
+  animation-duration: .5s;
+  animation-fill-mode: forwards;
+}
+
+.bookmark-display-expand-animation{
+  animation: bookmark-display-expand-animation;
+  animation-duration: .5s; 
+  animation-fill-mode: forwards;
+}
+
+.border{
+  border: 1px solid black;
+}
+
+.tiny-padding-bot{
+  padding-bottom: 5px;
+}
+
+@keyframes bookmark-display-expand-animation{
+  to {bottom: 0}
+}
+
+@keyframes bookmark-display-opacity-animation{
+  to {background-color: rgba(0, 206, 209,.55)}
 }
